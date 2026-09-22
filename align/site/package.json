@@ -1,0 +1,7 @@
+{
+  "name": "align-website",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs", "dev": "node build.mjs && node server.mjs", "test": "node check.mjs" },
+  "engines": { "node": ">=20" }
+}
