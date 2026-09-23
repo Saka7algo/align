@@ -121,15 +121,23 @@ These do not block initial layouts:
 
 ## Current implementation
 
+Latest SVG update (entry 025): the user requested removal of all newly added SVG illustrations. Removed the artwork and restored the prior page layouts. The original homepage circles and cost chart remain. This supersedes the implementation update below.
+
+SVG implementation update, 2026-09-23: the user authorized the illustration plan. Added nine content-specific primary SVGs and six homepage service symbols through site/illustrations.mjs. Source, generated markup, XML and asset-size checks passed; live browser layout verification remains unavailable under the prior approval restriction. This supersedes the planning-only status below.
+
+SVG planning update, 2026-09-23: SVG_ILLUSTRATION_PLAN.md proposes content-led artwork and responsive placement for all nine content routes plus 404. This is planning only; it does not change the website or supersede existing layouts until implemented in a later step.
+
+Contact update, 2026-09-23: the user supplied align.resolution@gmail.com and +91 8138960482. Both are now linked in the shared footer on every page. Earlier references to unavailable email/phone details are superseded; the no-dispute-intake-form requirement remains.
+
 Source lives in `site/`; preview is served at `http://127.0.0.1:4173` while the local server is running. See `site/README.md` for build and preview commands. There are nine content pages and a 404 page. Content, layout and styling remain open to user review.
 
 People and the Bench, Insights, newsletter signup, legal pages and downloadable resources await their actual content or configuration. They are intentionally absent from public navigation for now. Contact has the conflict-check explanation and supplied address, but no unavailable contact details. This is a local review version, not a published launch.
 
 Desktop and 390px mobile views were inspected. The mobile menu and cost-curve click/keyboard interactions were checked. A full accessibility audit, all-breakpoint review and final content review remain outstanding.
 
-## Proposed mobile hero refinement
+## Mobile hero refinement
 
-Status: planned only, following the user's mobile screenshot feedback. No website code changed for this request.
+Status: implemented on 2026-09-23 as part of the user's broader mobile redesign request. The specification below records the original plan; current implementation and test evidence are in MOBILE_REDESIGN.md.
 
 The current stacked hero gives both the headline and the party illustration dominant scale. The result is a long opening section with a large decorative area after the primary action. The screenshot also shows wide gaps between these elements. The mobile design should prioritise the message, introduction and starting-point link while retaining the brand metaphor.
 
@@ -154,7 +162,7 @@ Validation when implemented:
 - Compare the mobile hero with the supplied screenshot and check the transition into the next section.
 - Retain the current desktop composition unless responsive testing exposes a related issue.
 
-The next implementation step is this bounded hero refinement, followed by review of the rendered mobile result. Wider changes to other sections are not part of this plan.
+The 2026-09-23 request also authorized mobile navigation, service discovery, detail-page typography, readable chart alternatives and touch-target improvements. These changes are implemented locally. Publication and missing contact/resource details remain deferred.
 
 ## Maintenance rules
 

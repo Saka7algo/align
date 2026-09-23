@@ -45,6 +45,10 @@ The surveying/alignment metaphor belongs in the method content and subtle layout
 
 ## Imagery and diagrams
 
+Current decision (entry 025): remove the added SVG family and service-card symbols. Use the original homepage circles, cost chart and supplied logos; the illustration-family description below is historical and superseded.
+
+Implemented SVG family, 2026-09-23: each interior/error page has one static, decorative content-specific illustration beside its introduction on desktop and below it on smaller screens. Homepage service cards use simplified 44px symbols. Navy/sage flat geometry uses 2px non-scaling strokes; red appears only as the neutral in the mediation and standing-neutral scenes. Headings remain full-width, labels remain HTML and the existing homepage hero, chart and logo are preserved.
+
 - Refer to the supplied two-party compositions for brand imagery.
 - Do not add generic courtroom imagery or unverified team photographs.
 - Recreate the cost curve as a crisp responsive graphic, rather than using the brief's screenshot as the final component.
@@ -55,7 +59,7 @@ The surveying/alignment metaphor belongs in the method content and subtle layout
 
 - Use restrained motion only when it improves clarity; respect reduced-motion settings.
 - Make all controls keyboard accessible with visible focus states.
-- Provide cost-curve explanations on focus and touch as well as hover.
+- Provide cost-curve explanations as semantic text available without hover or interaction. The stage selector was removed at the user's request.
 - Implement the three visitor pathways as links within labelled navigation, not a form or questionnaire.
 - Do not implement a dispute contact form. Explain the conflict-check sequence as supplied.
 - Show real links and contact methods only when their destinations or details exist.
@@ -96,6 +100,22 @@ These references supplement the original brief. ALIGN retains its navy/sage iden
 
 The first version uses Georgia for editorial headings and Trebuchet MS with Segoe UI fallback for body text, without external font requests. Navy and sage retain the exact source values. Warm paper `#F7F7F2` and neutral red `#B84032` are implementation approximations of the references, not newly approved brand specifications.
 
-The supplied logo is retained as a local image. The hero's two-party composition is CSS geometry, with one small red neutral. Service pages share one content-driven template. On mobile, cost-curve stage controls become readable full-width rows. These choices may be refined after user review.
+The supplied logo is retained as a local image. The hero's two-party composition is CSS geometry, with one small red neutral. Service pages share one content-driven template. On phones and tablets, the cost curve becomes a readable, non-interactive ordered progression. The desktop SVG retains its labels, with complete stage text available to assistive technology. These choices may be refined after user review.
 
 The overall UI refinement uses a content-driven hero grid rather than absolute illustration positioning or a fixed hero height. Shared gutters cap the reading area at 1200px. Mobile service rows stack the service description below its name. Headings and section gaps are reduced to create clearer transitions. Source sage remains `#6F8F72` on brand shapes; italic text uses the darker derivative `#59775C` for readability on the light background. The illustration caption appears once, and the baseline carries only “Prevent · Align · Resolve”.
+
+### Mobile redesign — 2026-09-23
+
+Footer update (entry 019): shared footer uses brand, Contact us and Find us columns, followed by navigation. Tablet and mobile layouts stack the columns. User-supplied email and phone are clickable and have 44px minimum target heights.
+
+Content update (entry 016): hero copy now says “practice in Kozhikode.” The hero tagline baseline and divider are removed at the user's request. Historical baseline references below are superseded.
+
+Current placement (entry 014): on mobile the standalone symbol and caption sit between the introductory paragraph and the primary button. Desktop retains the illustration beside the copy. This supersedes the mobile placement described in entry 013 below.
+
+Current hero direction (entry 013): the user requested the old style again. Restore the standalone circles with “Two parties. One table.” below the primary button on mobile (230px illustration), and beside the copy on desktop. This supersedes entries 011 and 012 described below.
+
+Latest hero direction (entry 012): combine the symbol with the headline, immediately beside “winner.”, as a scalable inline SVG. Keep the full heading as HTML text and the symbol decorative. Move “Two parties. One table.” to the baseline. This supersedes both standalone illustration placements below and applies to desktop and mobile.
+
+Placement update: the user's subsequent request moves the two-party symbol above the mobile hero copy, centered below the header at 180px wide. This supersedes the 230px supporting illustration placement described below. The desktop composition remains beside the copy.
+
+Phone layouts use 20–32px fluid gutters, a compact sticky header, a 36–44px fluid hero headline and a 230px supporting illustration. Service cards become separated editorial rows on phones while retaining full descriptions and whole-row links. Navigation and the primary action have 48px minimum heights; footer and back links have 44px minimum heights. The menu closes on Escape, navigation, focus leaving the header or an outside click; desktop/mobile transitions reset its state. Without JavaScript, mobile navigation remains expanded in the document flow. See MOBILE_REDESIGN.md for verification and remaining limitations.
