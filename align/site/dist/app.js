@@ -195,7 +195,7 @@ if ('IntersectionObserver' in window) {
       if (!entry.isIntersecting) return;
       entranceObserver.unobserve(entry.target);
       if (quietMotion.matches) return;
-      const illustration = entry.target.matches('.board-art');
+      const illustration = entry.target.matches('.board-art, .method-art');
       const section = entry.target.closest('section');
       const order = groups.get(section) || 0;
       groups.set(section, order + 1);
@@ -210,7 +210,7 @@ if ('IntersectionObserver' in window) {
       });
     });
   }, { threshold: .12, rootMargin: '0px 0px -24px 0px' });
-  document.querySelectorAll('main h1, main h2, main h3, main p, main .eyebrow, main .board-art').forEach(element => entranceObserver.observe(element));
+  document.querySelectorAll('main h1, main h2, main h3, main p, main .eyebrow, main .board-art, main .method-art').forEach(element => entranceObserver.observe(element));
   quietMotion.addEventListener('change', () => {
     if (quietMotion.matches) document.getAnimations().forEach(animation => animation.cancel());
   });

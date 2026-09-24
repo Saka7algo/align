@@ -420,3 +420,74 @@ footer { padding: 40px var(--gutter) 24px; }
   .related { padding-top: 40px; }
   .cost-layout { gap: 24px; }
 }
+
+/* Paired principles: equal illustration slots keep headings on one baseline. */
+.method-columns { gap: clamp(32px, 6vw, 88px); }
+.method-art { display: flex; align-items: center; justify-content: flex-start; height: 162px; margin: 0 0 24px; mix-blend-mode: multiply; }
+.method-art img { display: block; width: auto; height: auto; max-width: 100%; max-height: 162px; filter: brightness(1.06); }
+.method-columns h2 { margin-bottom: 24px; }
+@media (max-width: 700px) {
+  .method-art { height: 140px; margin-bottom: 20px; }
+  .method-art img { max-height: 140px; }
+  .method-columns > div + div { margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--line); }
+}
+
+/* Keep each illustration beside its text, including at phone widths. */
+.method-heading { display: grid; grid-template-columns: minmax(0, 1fr) clamp(104px, 12vw, 160px); gap: 16px; align-items: center; margin-bottom: 24px; }
+.method-heading h2 { margin: 0; font-size: clamp(1.65rem, 2.6vw, 2.65rem); }
+.method-heading .eyebrow { margin-bottom: 16px; }
+.method-heading .method-art { width: 100%; height: auto; margin: 0; }
+.method-heading .method-art img { width: 100%; height: auto; max-height: none; object-fit: contain; }
+@media (min-width: 701px) and (max-width: 1000px) {
+  .method-columns { gap: 28px; }
+  .method-heading { grid-template-columns: minmax(0,1fr) 96px; gap: 12px; }
+}
+@media (max-width: 700px) {
+  .method-heading { grid-template-columns: minmax(0,1fr) clamp(88px, 27vw, 140px); gap: 16px; margin-bottom: 24px; }
+  .method-heading h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .method-heading .eyebrow { margin-bottom: 12px; }
+}
+
+/* A clear editorial statement, with no decorative overflow or reserved art space. */
+.intro.section { padding-block: clamp(48px, 6vw, 80px); }
+.intro h2 { max-width: 30ch; margin-bottom: 32px; text-wrap: pretty; }
+.intro-bottom { align-items: center; gap: 32px; }
+.intro-bottom p { max-width: 62ch; margin: 0; }
+.intro-bottom .text-link { flex-shrink: 0; }
+@media (max-width: 700px) {
+  .hero { padding-top: 32px; }
+  .intro h2 { max-width: none; font-size: clamp(1.875rem, 7.8vw, 2.25rem); line-height: 1.18; margin-bottom: 24px; }
+  .intro-bottom { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .intro-bottom p { max-width: none; margin: 0; line-height: 1.65; }
+  .intro-bottom .text-link { padding-bottom: 10px; }
+}
+
+/* One cream staircase chart; retain legible desktop labels at every width. */
+.curve-section .cost-copy { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 40px; align-items: start; }
+.curve-section .cost-copy h2 { margin-bottom: 0; }
+.escalation-figure { margin-top: 40px; color: var(--muted); }
+.escalation-scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #8c9d88 #e8ece3; padding-bottom: 12px; }
+.escalation-scroll:focus-visible { outline: 2px solid var(--sage); outline-offset: 6px; }
+.escalation-art { min-width: 1100px; }
+.escalation-art .step-title { display: block; fill: var(--navy); font-size: 15px; letter-spacing: 1px; }
+.escalation-art .step-caption { display: block; fill: var(--muted); font-size: 13px; letter-spacing: 0; }
+.escalation-art .step-axis-label { fill: var(--muted); font-size: 11px; letter-spacing: 1px; }
+.escalation-art .step-axis { stroke: #71847b; }
+.escalation-art .step-track { stroke: #728a76; opacity: .3; }
+.escalation-art .step-line { stroke-width: 2; }
+.chart-swipe-hint { display: none; font-size: 13px; margin-bottom: 12px; }
+.chart-swipe-hint span { margin-left: 8px; }
+@media (max-width: 1250px) { .chart-swipe-hint { display: block; } }
+@media (max-width: 700px) {
+  .curve-section .cost-copy { grid-template-columns: 1fr; gap: 24px; }
+  .escalation-figure { margin-top: 28px; }
+}
+
+/* Fit the complete staircase within the page; no horizontal interaction. */
+.escalation-scroll { overflow: visible; padding-bottom: 0; }
+.escalation-art { min-width: 0; width: 100%; }
+@media (max-width: 700px) {
+  .escalation-art .step-title { font-size: 24px; letter-spacing: 0; }
+  .escalation-art .step-caption { font-size: 18px; letter-spacing: 0; }
+  .escalation-art .step-axis-label { font-size: 16px; letter-spacing: 0; }
+}
